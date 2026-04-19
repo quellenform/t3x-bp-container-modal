@@ -1,0 +1,38 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:i="http://typo3.org/ns/Quellenform/Iconpack/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:variable name="modalUid">modal-{data.uid}</f:variable>
+<f:variable name="modalCssClass">modal-dialog modal-{data.pi_flexform.size}</f:variable>
+<f:variable name="buttonColor">{data.pi_flexform.color}</f:variable>
+<f:variable name="modalHeader">{data.pi_flexform.modalHeader}</f:variable>
+<f:variable name="modalFooter">{data.pi_flexform.modalFooter}</f:variable>
+<f:variable name="buttonAlignment">{data.header_position}</f:variable>
+<f:if condition="{buttonAlignment}">
+	<f:variable name="buttonCssClass" value=" btn-{buttonAlignment}" />
+</f:if>
+<button class="btn btn-{buttonColor}{buttonCssClass}" type="button" data-bs-toggle="modal" data-bs-target="#{modalUid}">
+	<i:icon iconfig="{data.header_icon}" />{data.header}
+</button>
+<div class="modal fade container-modal" id="{modalUid}" tabindex="-1">
+	<div class="{modalCssClass}">
+		<div class="modal-content">
+			<f:if condition="{modalHeader}">
+				<div class="modal-header"><span class="modal-title h4" id="modalabel">
+						<i:icon iconfig="{data.header_icon}" />{data.header}
+					</span>
+					<button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+			</f:if>
+			<div class="modal-body">
+				<f:for each="{children_201}" as="record">
+					<f:format.raw>{record.renderedContent}</f:format.raw>
+				</f:for>
+			</div>
+			<f:if condition="{modalFooter}">
+				<div class="modal-footer">
+					<button class="btn btn-{buttonColor}" type="button" data-bs-dismiss="modal">{modalFooter}</button>
+				</div>
+			</f:if>
+		</div>
+	</div>
+</div>
+
+</html>

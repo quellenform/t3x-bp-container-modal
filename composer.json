@@ -1,0 +1,44 @@
+{
+	"name": "quellenform/t3x-bp-container-modal",
+	"type": "typo3-cms-extension",
+	"description": "Modal Container for Bootstrap Package",
+	"keywords": [
+		"TYPO3",
+		"extension"
+	],
+	"license": [
+		"GPL-3.0-or-later"
+	],
+	"homepage": "https://extensions.typo3.org/extension/bp_container_modal",
+	"support": {
+		"source": "https://github.com/quellenform/t3x-bp-container-modal",
+		"issues": "https://github.com/quellenform/t3x-bp-container-modal/issues"
+	},
+	"authors": [
+		{
+			"name": "Stephan Kellermayr",
+			"email": "typo3@quellenform.at",
+			"role": "Developer",
+			"homepage": "https://www.quellenform.at/"
+		}
+	],
+	"require": {
+		"typo3/cms-core": ">=13.4 <15 || 15.*.*@dev",
+		"quellenform/t3x-iconpack": "^1.5.3",
+		"bk2k/bootstrap-package": ">=16.0.0 <17 || 17.0.x-dev || dev-master"
+	},
+	"replace": {
+		"typo3-ter/bp-container-modal": "self.version"
+	},
+	"repositories": [
+		{
+			"type": "composer",
+			"url": "https://composer.typo3.org/"
+		}
+	],
+	"extra": {
+		"typo3/cms": {
+			"extension-key": "bp_container_modal"
+		}
+	}
+}

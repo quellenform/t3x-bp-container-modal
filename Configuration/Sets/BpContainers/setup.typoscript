@@ -1,0 +1,59 @@
+lib.contentContainer {
+  partialRootPaths {
+    3 = EXT:bp_container_modal/Resources/Private/Partials/ContentElements/
+  }
+  layoutRootPaths {
+    3 = EXT:bp_container_modal/Resources/Private/Layouts/ContentElements/
+  }
+}
+
+lib.contentElement {
+  # RESPONSIVE IMAGE CONFIG
+  settings.responsiveimages.container {
+    container_modal {
+      variants {
+        default {
+          breakpoint = 1400
+          width = 1054
+        }
+        xlarge {
+          breakpoint = 1200
+          width = 1054
+        }
+        large {
+          breakpoint = 992
+          width = 720
+        }
+        medium {
+          breakpoint = 768
+          width = 426
+        }
+        small {
+          breakpoint = 576
+          width = 432
+        }
+        extrasmall {
+          breakpoint = unset
+          width = 486
+        }
+      }
+      # To correct widths you can also use:
+      ##201.[multiplier|gutters|corrections].[default|xlarge|large|medium|small]...
+    }
+  }
+}
+
+tt_content.container_modal >
+# CTYPE: CONTAINER MODAL
+tt_content.container_modal < lib.contentContainer
+tt_content.container_modal {
+  dataProcessing {
+    101 = BK2K\BootstrapPackage\DataProcessing\FlexFormProcessor
+  }
+}
+
+page {
+  includeCSS {
+    bp_container_modal = EXT:bp_container_modal/Resources/Public/Scss/BpContainerModal.css
+  }
+}

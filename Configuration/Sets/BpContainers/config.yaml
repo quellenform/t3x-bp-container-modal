@@ -1,0 +1,5 @@
+name: quellenform/bp-container-modal
+label: "Bootstrap Package: Modal Container"
+dependencies:
+  - bootstrap-package/container
+  - quellenform/iconpack

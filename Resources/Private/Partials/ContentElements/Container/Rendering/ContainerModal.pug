@@ -1,0 +1,38 @@
+//- doctype html
+html(
+	xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	xmlns:i="http://typo3.org/ns/Quellenform/Iconpack/ViewHelpers"
+	data-namespace-typo3-fluid="true"
+)
+
+	f:variable(name="modalUid") modal-{data.uid}
+	f:variable(name="modalCssClass") modal-dialog modal-{data.pi_flexform.size}
+	f:variable(name="buttonColor") {data.pi_flexform.color}
+	f:variable(name="modalHeader") {data.pi_flexform.modalHeader}
+	f:variable(name="modalFooter") {data.pi_flexform.modalFooter}
+	f:variable(name="buttonAlignment") {data.header_position}
+	f:if(condition="{buttonAlignment}")
+		f:variable(name="buttonCssClass" value=" btn-{buttonAlignment}")/
+
+	button(type="button" class="btn btn-{buttonColor}{buttonCssClass}" data-bs-toggle="modal" data-bs-target="#{modalUid}")
+		i:icon(iconfig="{data.header_icon}")/
+		| {data.header}
+
+	div(class="modal fade container-modal" id="{modalUid}" tabindex="-1")
+		div(class="{modalCssClass}")
+			div(class="modal-content")
+				f:if(condition="{modalHeader}")
+					div(class="modal-header")
+						span(class="modal-title h4" id="modalabel")
+							i:icon(iconfig="{data.header_icon}")/
+							| {data.header}
+						button(type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close")
+
+				div(class="modal-body")
+					f:for(each="{children_201}" as="record")
+						#{'f:format.raw'} {record.renderedContent}
+
+				f:if(condition="{modalFooter}")
+					div(class="modal-footer")
+						button(type="button" class="btn btn-{buttonColor}" data-bs-dismiss="modal")
+							| {modalFooter}

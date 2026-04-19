@@ -1,0 +1,40 @@
+//
+// Container Modal
+// --------------------------------------------------
+
+// Correct spacings
+.modal {
+	--bs-modal-padding: 20px;
+}
+.container-modal .modal-body {
+	--bs-modal-padding: 0;
+}
+.modal-body {
+	> .frame {
+		padding-left: var(--frame-spacing);
+		padding-right: var(--frame-spacing);
+
+		&:first-child {
+			padding-top: var(--frame-spacing);
+		}
+		&:last-child {
+			padding-bottom: var(--frame-spacing);
+		}
+	}
+}
+.modal-body .frame-container {
+	padding: 0 !important;
+}
+
+// Align modal button
+.contentcontainer[data-container-identifier="container_modal"] > button {
+	&.btn-right {
+		margin: 0 0 0 auto;
+	}
+	&.btn-center {
+		margin: 0 auto;
+	}
+	&.btn-left {
+		margin: 0 auto 0 0;
+	}
+}

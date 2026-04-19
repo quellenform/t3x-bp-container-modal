@@ -1,0 +1,48 @@
+html(
+	xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	xmlns:bk2k="http://typo3.org/ns/BK2K/BootstrapPackage/ViewHelpers"
+	data-namespace-typo3-fluid="true"
+)
+
+	#{'bk2k:data.imageVariants'}(as="variants" variants="{settings.responsiveimages.variants}")/
+	f:variable(name="backendlayoutConfig") {settings.responsiveimages.backendlayout.{backendlayout}}
+	f:variable(name="columnConfig") {backendlayoutConfig.{data.colPos}}
+	f:if(condition="{columnConfig}")
+		#{'bk2k:data.imageVariants'}(as="variants" variants="{variants}" multiplier="{columnConfig.multiplier}" gutters="{columnConfig.gutters}" corrections="{columnConfig.corrections}")/
+
+	f:if(condition="{containerContext}")
+		f:for(each="{containerContext}" as="context")
+			f:variable(name="containerConfig") {settings.responsiveimages.container.{context.CType}}
+			f:variable(name="containerColumnConfig") {containerConfig.{context.childColPos}}
+			//- Container Modal: Override variants (!)
+			f:if(condition="{context.CType} == 'container_modal'")
+				#{'bk2k:data.imageVariants'}(as="variants" variants="{settings.responsiveimages.container.{context.CType}.variants}")/
+			f:if(condition="{containerColumnConfig}")
+				#{'bk2k:data.imageVariants'}(as="variants" variants="{variants}" multiplier="{containerColumnConfig.multiplier}" gutters="{containerColumnConfig.gutters}" corrections="{containerColumnConfig.corrections}")/
+
+	bk2k:frame(
+		id="c{data.uid}"
+		type="{data.CType}"
+		size="default"
+		layout="{data.frame_layout}"
+		frameClass="{data.frame_class}"
+		frameAttributes="{frameAttributes}"
+		spaceBefore="{data.space_before_class}"
+		spaceAfter="{data.space_after_class}"
+		options="{data.frame_options}"
+		variants="{variants}"
+		backgroundColor="{data.background_color_class}"
+		backgroundImage="{backgroundImage.0}"
+		backgroundImageOptions="{data.background_image_options}"
+	)
+		f:if(condition="{data._LOCALIZED_UID}")
+			a(id="c{data._LOCALIZED_UID}")
+		f:render(section="Before" optional="true")
+			f:render(partial="DropIn/Before/All" arguments="{_all}")/
+		f:render(section="Header" optional="true")
+			f:render(partial="Header/All" arguments="{_all}")/
+		f:render(section="Main" optional="true")/
+		f:render(section="Footer" optional="true")
+			f:render(partial="Footer/All" arguments="{_all}")/
+		f:render(section="After" optional="true")
+			f:render(partial="DropIn/After/All" arguments="{_all}")/

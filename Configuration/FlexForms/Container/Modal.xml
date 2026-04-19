@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3DataStructure>
+  <meta>
+    <langDisable>1</langDisable>
+  </meta>
+  <sheets>
+    <sDEF>
+      <ROOT>
+        <sheetTitle>sheetTitle</sheetTitle>
+        <type>array</type>
+        <el>
+          <size>
+            <label>LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:field.icon_size</label>
+            <config>
+              <type>select</type>
+              <renderType>selectSingle</renderType>
+              <items type="array">
+                <numIndex index="0" type="array">
+                  <label>LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.small</label>
+                  <value>sm</value>
+                </numIndex>
+                <numIndex index="1" type="array">
+                  <label>LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.medium</label>
+                  <value>md</value>
+                </numIndex>
+                <numIndex index="2" type="array">
+                  <label>LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.large</label>
+                  <value>lg</value>
+                </numIndex>
+                <numIndex index="3" type="array">
+                  <label>LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.xlarge</label>
+                  <value>xl</value>
+                </numIndex>
+              </items>
+              <default>lg</default>
+            </config>
+          </size>
+          <color>
+            <label>LLL:EXT:core/Resources/Private/Language/locallang_core.xlf:labels.color</label>
+            <config>
+              <type>select</type>
+              <renderType>selectSingle</renderType>
+              <items type="array">
+                <numIndex index="0" type="array">
+                  <label>LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.default</label>
+                  <value></value>
+                </numIndex>
+                <numIndex index="1" type="array">
+                  <label>LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.primary</label>
+                  <value>primary</value>
+                </numIndex>
+                <numIndex index="2" type="array">
+                  <label>LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.secondary</label>
+                  <value>secondary</value>
+                </numIndex>
+                <numIndex index="3" type="array">
+                  <label>LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.tertiary</label>
+                  <value>tertiary</value>
+                </numIndex>
+                <numIndex index="4" type="array">
+                  <label>LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.quaternary</label>
+                  <value>quaternary</value>
+                </numIndex>
+                <numIndex index="5" type="array">
+                  <label>LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.success</label>
+                  <value>success</value>
+                </numIndex>
+                <numIndex index="6" type="array">
+                  <label>LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.info</label>
+                  <value>info</value>
+                </numIndex>
+                <numIndex index="7" type="array">
+                  <label>LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.warning</label>
+                  <value>warning</value>
+                </numIndex>
+                <numIndex index="8" type="array">
+                  <label>LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:option.danger</label>
+                  <value>danger</value>
+                </numIndex>
+              </items>
+            </config>
+          </color>
+          <modalHeader>
+            <label>LLL:EXT:bp_container_modal/Resources/Private/Language/locallang_be.xlf:container.modal.flexform.modalHeader</label>
+            <config>
+              <type>check</type>
+              <renderType>checkboxToggle</renderType>
+              <default>1</default>
+            </config>
+          </modalHeader>
+          <modalFooter>
+            <label>LLL:EXT:bp_container_modal/Resources/Private/Language/locallang_be.xlf:container.modal.flexform.modalFooter</label>
+            <config>
+              <type>input</type>
+              <behaviour>
+                <allowLanguageSynchronization>1</allowLanguageSynchronization>
+              </behaviour>
+              <default></default>
+            </config>
+          </modalFooter>
+        </el>
+      </ROOT>
+    </sDEF>
+  </sheets>
+</T3DataStructure>

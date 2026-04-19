@@ -1,0 +1,36 @@
+.modal {
+	--bs-modal-padding: 20px;
+}
+
+.container-modal .modal-body {
+	--bs-modal-padding: 0;
+}
+
+.modal-body>.frame {
+	padding-left: var(--frame-spacing);
+	padding-right: var(--frame-spacing);
+}
+
+.modal-body>.frame:first-child {
+	padding-top: var(--frame-spacing);
+}
+
+.modal-body>.frame:last-child {
+	padding-bottom: var(--frame-spacing);
+}
+
+.modal-body .frame-container {
+	padding: 0 !important;
+}
+
+.contentcontainer[data-container-identifier=container_modal]>button.btn-right {
+	margin: 0 0 0 auto;
+}
+
+.contentcontainer[data-container-identifier=container_modal]>button.btn-center {
+	margin: 0 auto;
+}
+
+.contentcontainer[data-container-identifier=container_modal]>button.btn-left {
+	margin: 0 auto 0 0;
+}
