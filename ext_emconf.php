@@ -2,7 +2,7 @@
 
 $EM_CONF[$_EXTKEY] = [
     'title' => 'Modal Container for Bootstrap Package',
-    'description' => 'Adds a modal container to EXT:bootstrap_package',
+    'description' => 'Adds a modal window container to EXT:bootstrap_package.',
     'category' => 'fe',
     'state' => 'alpha',
     'clearcacheonload' => true,

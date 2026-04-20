@@ -1,7 +1,7 @@
 {
 	"name": "quellenform/t3x-bp-container-modal",
 	"type": "typo3-cms-extension",
-	"description": "Modal Container for Bootstrap Package",
+	"description": "Adds a modal window container to EXT:bootstrap_package.",
 	"keywords": [
 		"TYPO3",
 		"extension"
