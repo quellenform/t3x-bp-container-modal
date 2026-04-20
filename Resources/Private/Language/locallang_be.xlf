@@ -14,7 +14,7 @@
 				<source>Modal Container</source>
 			</trans-unit>
 			<trans-unit id="container.modal.description" xml:space="preserve">
-				<source>A container for several content elements</source>
+				<source>Displays the container's contents in a modal window</source>
 			</trans-unit>
 			<trans-unit id="container.modal.column" xml:space="preserve">
 				<source>Modal Content</source>

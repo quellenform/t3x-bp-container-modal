@@ -17,8 +17,8 @@
 				<target>Modal Container</target>
 			</trans-unit>
 			<trans-unit id="container.modal.description" xml:space="preserve" approved="yes">
-				<source>A container for several content elements</source>
-				<target>Ein Container für verschiedene Inhaltselemente</target>
+				<source>Displays the container's contents in a modal window.</source>
+				<target>Zeigt den Container Inhalt in einem modalen Fenster.</target>
 			</trans-unit>
 			<trans-unit id="container.modal.column" xml:space="preserve" approved="yes">
 				<source>Modal Content</source>
